@@ -10,7 +10,7 @@ def long(n):
     >> long(3)
     [[14, 15, 26, 55, 58, 92], [58], [47, 79, 88]]
     """
-    # 
+    # Создаём 
     arrays_len = random.sample(range(1, random.randint(n + 1, 100)), n)
     arrays = []
     for i in range(len(arrays_len)):
