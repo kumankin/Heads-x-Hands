@@ -10,9 +10,11 @@ def long(n):
     >> long(3)
     [[14, 15, 26, 55, 58, 92], [58], [47, 79, 88]]
     """
-    # Создаём 
-    arrays_len = random.sample(range(1, random.randint(n + 1, 100)), n)
+    # Создаём список в котором будем хранить длины массивов
+    # (при этом должны учесть, что длина массивов должна быть различной от 1 до 100)
+    arrays_len = random.sample(range(1, random.randint(n + 1, 101)), n)
     arrays = []
+    # Заполняем массив массивами случайных чисел сразу сортируя их, чётные массивы по возрастанию, нечётные по убыванию
     for i in range(len(arrays_len)):
         arrays.append(sorted([random.randint(0, 100) for j in range(int(arrays_len[i]))], reverse=bool(i % 2)))
     return arrays
