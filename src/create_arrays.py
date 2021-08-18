@@ -29,4 +29,4 @@ def short(n):
     >> short(3)
     [[14, 15, 26, 55, 58, 92], [58], [47, 79, 88]]
     """
-    return [sorted([random.randint(0, 100) for i in range(int(random.sample(range(1, random.randint(n + 1, 100)), n)[i]))], reverse=bool(i % 2)) for i in range(int(n))]
+    return [sorted([random.randint(0, 100) for i in range(int(random.sample(range(1, random.randint(n + 1, 101)), n)[i]))], reverse=bool(i % 2)) for i in range(int(n))]
